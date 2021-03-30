@@ -1,0 +1,28 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+
+    <h2 id="blogtitle" class="font-weight-bold text-center pt-5">Blog</h2>
+
+    <h3 class="text-center mb-4">Hanna has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h3>
+    
+    <div class="container">
+        <p class="text-center pt-4 mb-5">These are essays on topics in which I have special interest. 
+        Hopefully something triggers me enough for me to write more. </p>
+    </div>
+
+<div class="containter-md p-3">
+    {% for blog in blogs %}
+    <div class="row justify-content-center py-3">
+        <div class="col-md-10">
+            <a href="{% url 'blog:detail' blog.id %}">
+                <h2>{{ blog.title }}</h2>
+            </a>
+            <h6 class="text-muted">{{ blog.pub_date|date:'M d Y'|upper }}</h6>
+            <h5>{{ blog.body|striptags|truncatechars:100 }}</h5>
+            <br>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

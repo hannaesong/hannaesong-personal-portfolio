@@ -1,0 +1,18 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+
+<h1 class="text-center mt-5" id="blogdetailtitle">{{ move.city }}</h1>
+<h5 class="text-center text-muted mb-5">--{{ move.moved_in|date:'F Y'}}-{{ move.moved_out|date:'F Y' }}--</h5>
+
+<div class="container">
+    <img src="{{ move.image.url }}" class="img-fluid mx-auto d-block">
+</div>
+<br>
+
+
+<div class="container">
+    {{ move.story|safe }}
+</div>
+
+
+{% endblock %}

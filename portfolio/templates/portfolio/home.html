@@ -1,0 +1,36 @@
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="row justify-content-center my-4">
+    <div class="col-7">
+        <img src="{% static 'portfolio/HannaBochum.jpg' %}" class="img-fluid rounded" alt="Hanna Song">
+    </div>
+  </div>
+
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+    <h1 id="hometext" class="font-weight-bold">Hanna Song</h1>
+    <h3>Jack-of-all-Trades, Peculiar Crack in the System, Old Soul, Wandering Dove,
+    and Tentative Scribe</h3>
+  </div>
+</div>
+
+<div class="container">
+<h2 class="mt-5">Hobbies</h2>
+<hr>
+    <div class="row" data-masonry='{"percentPosition": true }'>
+        {% for project in projects %}
+        <div class="col-lg-4 col-md-6 p-4">
+            <img src="{{ project.image.url }}" class="img-fluid mb-2 rounded" alt="{{ project.title }}">
+            <h5>{{ project.title }}</h5>
+            <small>{{ project.description }}</small>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
