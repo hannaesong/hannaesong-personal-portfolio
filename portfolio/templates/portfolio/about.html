@@ -2,52 +2,60 @@
 {% load static %}
 {% block content %}
 
-<h1 class="font-weight-bold text-center pt-3" id="abouttitle">About</h1>
-
-<h3 class="text-center mb-3 p-2">Yours truly and this website</h3>
-
-
-
-  <div class="container p-4">
-    <p>This is a webiste that I made to, first of all, learn website development and, second, to showcase 
-my thoughts, hobbies, and story. 
-    </p>
-    <p>I am Hanna Song, the Jack-of-all-Trades, the Perculiar Crack in the System, the Old Soul, Wandering Dove, and Tentative Scribe.
-      My, old Bilbo Baggins must have had a lot of fun coming up with all those titles for himself. 
-
-    </p>
-    <p>
-	  If you'd like to know about me, particulary my upbringing in a number of different countries,
-	  I've outlined my journey in my timeline. 
-    </p>
-
-    <p>
-    I think that I am something of a writer--I try to be anyway--which is why I've included a blog. 
-      I'll be writing short essays, thoughts, and maybe stories on what I hope will be a monthly basis. 
-     
-    </p>
-
-    <p>
-     I also like to think that I am well-read. Not sure that I am, but I have  included a section for books all the same. 
-    </p>
-
-    <p>
-    All of the photos featured on this website are either old family photos or ones taken by my sister, <a href="https://www.instagram.com/irangomango/">Irang</a>.
-    </p>
-  </div>
-
- <footer class="text-muted text-center">
-    <div class="container">
-		<div class="row justify-content-center">
-           <div class="col-lg-1">
-                <a href="mailto:hannasong2000@gmail.com">Email</a>
-            </div>
-            <div class="col-lg-1">
-                <a href="https://www.instagram.com/hannaesong/">Instagram</a>
-            </div>
-        </div>
+<div class="containter p-4">
+  <head>
+    <h1 class="font-weight-bold text-center pt-3" id="abouttitle">About</h1>
+  
+    <h3 class="text-center mb-3 p-2">Yours truly and this website</h3>
+  </head>
+  
+  
+  <body>
+    <div class="container p-4">
+      <p>I am Hanna Song, the Jack-of-all-Trades, the Perculiar Crack in the System, the Old Soul, Wandering Dove, and Tentative Scribe.
+      </p>
+      <div class="container p-2"><p>      <i>My, old Bilbo Baggins must have had a lot of fun coming up with all those titles for himself.</i></p></div>
+      
+      <p>This is a webiste that I made to, first of all, learn website development and, second, to showcase 
+      my thoughts, hobbies, and story. I honestly haven't been doing a good job at keeping this up to date: if you ever see me in real life, 
+       you think I should be more diligent in improving this website, pray do tell. 
+      </p>
+      
+      <p>
+      You may be here because you asked me about my childhood or where I lived before now. Well, your answer is in the <a href="{% url 'move:all_moves' %}">Timeline</a>.
+      </p>
+  
+      <p>
+      I think that I am something of a writer--I try to be anyway--which is why I've included a blog. 
+        I'll be writing short essays, thoughts, and maybe stories on what I hope will be a monthly basis. 
+  
+       
+      </p>
+  
+      <p>
+       I also like to think that I am well-read. Not sure that I am, but I have included a section for books all the same. 
+      </p>
+  
+      <p>
+      All of the photos featured on this website are either old family photos or ones taken by my sister, <a href="https://www.instagram.com/irangomango/">Irang</a>.
+      </p>
     </div>
-  </footer>
+  
+  </body>
+  
+</div>
 
+<footer class="text-muted text-center">
+  <div class="container">
+  <div class="row justify-content-center">
+         <div class="col-lg-1">
+              <a href="mailto:hannasong2000@gmail.com">Email</a>
+          </div>
+          <div class="col-lg-1">
+              <a href="https://www.instagram.com/hannaesong/">Instagram</a>
+          </div>
+      </div>
+  </div>
+</footer>
 
 {% endblock %}

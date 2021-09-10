@@ -1,7 +1,8 @@
 {% extends 'portfolio/base.html' %}
 {% block content %}
 
-<h1 class="text-center mt-5" id="blogdetailtitle">{{ book.title }}</h1>
+<div class="container p-2">
+    <h1 class="text-center mt-5" id="blogdetailtitle">{{ book.title }}</h1>
 <h2 class="text-center mt-2" id="bookauthor">written by {{ book.author }}</h2>
 <h5 class="text-center text-muted mb-5">--{{ book.start_date|date:'F jS Y'}}-{{ book.end_date|date:'F jS Y'}}--</h5>
 
@@ -28,6 +29,9 @@
     </div>
 </div>
     
+</div>
+
+
 
 
 {% endblock %}
