@@ -8,12 +8,12 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-4 align-self-center p-2">
+        <div class="col-md-4 d-flex justify-content-center m-4">
             <a href="{{ book.url }}">
                 <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="rounded mx-auto d-block" width="250" target="blank">
             </a>
         </div>
-        <div class="col-md-6 align-self-center p-2">
+        <div class="col-md-6 p-2">
             <p id="booksummary">{{ book.summary|safe }}</p>
         </div>
     </div>
