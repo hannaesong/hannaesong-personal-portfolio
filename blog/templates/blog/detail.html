@@ -10,10 +10,14 @@
     <img src="{{ blog.image.url }}" class="img-fluid mx-auto d-block rounded">
 </div>
 <br>
+
+<div class="container p-4">
+    {{ blog.description|safe }}
+</div>
 {% endif %}
 
 
-<div class="container px-3 py-5">
+<div class="container px-3 py-3">
     {{ blog.body|safe }}
 </div>
 
